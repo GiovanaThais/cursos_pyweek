@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def cadastro(request):
-    return HttpResponse('cadastro')
+    return render(request,'cadastro.html')
 
 def login(request):
-    return HttpResponse('login')
+    return render(request,'login.html')
 # Create your views here.
