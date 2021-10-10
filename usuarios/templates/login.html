@@ -8,6 +8,17 @@ Logar
 {% block 'body' %}
 <div class="container">
 
+    {% if status == '1' %}
+    <div class="alert alert-danger" role="alert">
+        E-mail ou senha inválido
+    </div>
+    {% endif %}
+    {% if status == '2' %}
+    <div class="alert alert-warning" role="alert">
+        Faça login antes de acessar o sistema!
+    </div>
+    {% endif %}
+
     <div class="row">
     <div class="col-md-3">
 
@@ -16,7 +27,7 @@ Logar
         <br>
         <h1>Login</h1>
         <hr>
-        <form method="POST" action="#">
+        <form method="POST" action="{% url 'valida_login'%}">{% csrf_token %}
             <label>Digite seu Email:</label>
             <input class="form-control" type="text" placeholder="E-mail" name = "email">
             <br>
