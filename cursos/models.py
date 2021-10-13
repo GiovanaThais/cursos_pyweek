@@ -51,3 +51,7 @@ class NotasAulas(models.Model):
     nota = models.CharField(max_length=50, choices=choices)
     usuario = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING)
 
+    class Meta:
+        verbose_name = "Notas aula" 
+        verbose_name_plural = "Notas Aulas"
+
