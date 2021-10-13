@@ -29,7 +29,7 @@ def aula(request, id):
 
         request_usuario = request.session.get('usuario')
         usuario_avaliou = NotasAulas.objects.filter(aula_id = id).filter(usuario_id = request_usuario)
-        avaliacoes = NotasAulas.objects.filter(aula_id = id)
+        avaliacoes = NotasAulas.objects.filter(aula_id = id) #exibir todas as avaliacoes
 
 
 
