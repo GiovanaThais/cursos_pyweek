@@ -70,22 +70,7 @@ Aula
         <source src="{{aula.aula.url}}" type="video/mp4">
     </video>
     <hr>
-
-    <h1>Faça seu comentário: </h1>
-    <input id="comentario" type="text" placeholder="Comentário..." class="form-control">
-    <br>
-    <input onclick="envia_comentario()" type="button" value="Enviar" class="btn btn-success btn-lg">
-    <hr>
-    <div id="comentarios">
-        {% for i in comentarios%}
-        <div style="background-color: blue; width: 30px; height: 30px; border-radius: 15px; display: inline-block;"></div>
-        <h5 style="display: inline;">{{i.usuario}}</h5>
-        <p style="margin-left: 50px;">{{i.comentario}}</p>
-        <hr>
-        {% endfor %}
     </div>
-
-</div>
     <div id="avaliacoes">
         {% for i in avaliacoes%}
         <h5 style="display: inline;">
@@ -169,6 +154,21 @@ Aula
         <br>
         {% endfor %}
     </div>
+    <h1>Faça seu comentário: </h1>
+    <input id="comentario" type="text" placeholder="Comentário..." class="form-control">
+    <br>
+    <input onclick="envia_comentario()" type="button" value="Enviar" class="btn btn-success btn-lg">
+    <hr>
+    <div id="comentarios">
+        {% for i in comentarios%}
+        <div style="background-color: blue; width: 30px; height: 30px; border-radius: 15px; display: inline-block;"></div>
+        <h5 style="display: inline;">{{i.usuario}}</h5>
+        <p style="margin-left: 50px;">{{i.comentario}}</p>
+        <hr>
+        {% endfor %}
+    </div>
+
+
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
 function envia_comentario(){

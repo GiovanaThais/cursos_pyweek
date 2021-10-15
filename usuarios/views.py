@@ -4,9 +4,9 @@ from .models import Usuario
 from django.shortcuts import redirect
 import hashlib
 
-def cadastro(request):
-    if request.session.get('usuario'):
-        return redirect('/home/')
+def cadastro(request): 
+    #if request.session.get('usuario'):
+        #return redirect('/home/')
     status = request.GET.get('status')
     return render(request, 'cadastro.html', {'status': status})
 
